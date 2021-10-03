@@ -11,10 +11,10 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        $products = Products::inRandomOrder()->limit(5)->get();
-        $cars     = Car::inRandomOrder()->limit(5)->get();
-        $clients  = Client::inRandomOrder()->limit(5)->get();
-        return view('Admin/index',compact('products','cars','clients'));
+//        $products = Products::inRandomOrder()->limit(5)->get();
+//        $cars     = Car::inRandomOrder()->limit(5)->get();
+//        $clients  = Client::inRandomOrder()->limit(5)->get();
+        return view('Admin/index'/*,compact('products','cars','clients')*/);
     }
 
 

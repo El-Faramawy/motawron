@@ -5,7 +5,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
 
-                <a class="navbar-brand" href="index.html"><img src="img/logo2.png"></a>
+                <a class="navbar-brand" href="index.html"><img src="{{url('Site')}}/img/logo2.png"></a>
 
                 <div class="d-lg-none"><i id="rightSlide" data-activates="slide-out"
                                           class="fas fa-bars text-dark button-collapse"></i></div>
@@ -126,7 +126,7 @@
         <div id="slide-out" class="side-nav fixed d-lg-none">
 
             <div class="logo-wrapper waves-light m-auto">
-                <a href="index.html"><img src="img/logo2.png" class=" h-100 flex-center"></a>
+                <a href="index.html"><img src="{{url('Site')}}/img/logo2.png" class=" h-100 flex-center"></a>
             </div>
 
             <ul class="custom-scrollbar text-white ">

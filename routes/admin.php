@@ -41,24 +41,14 @@ Route::group(['prefix' => 'admin'], function () {
 
 
         ################################### Shopping cars ##########################################
-        Route::get('shopping_cars','ShoppingCarsController@index')->name('shopping_cars');
-        Route::post('delete_car','ShoppingCarsController@delete')->name('delete.car');
-        Route::get('add_car','ShoppingCarsController@add')->name('add.car');
-        Route::post('create_car','ShoppingCarsController@create')->name('create.car');
-        Route::get('edit_car/{id}','ShoppingCarsController@edit')->name('edit_car');
-        Route::post('update_car','ShoppingCarsController@update')->name('update.car');
+        Route::get('services','ServiceController@index')->name('services');
+//        Route::get('all/services','ServiceController@all_services')->name('all.services');
+        Route::get('all/contact','ServiceController@all_contact')->name('all.contact');
 
+        ################################### About ##########################################
+        Route::get('main_about','ServiceController@main_about')->name('main_about');
+        Route::get('about_us','ServiceController@about_us')->name('about_us');
 
-
-        ################################### Product ##########################################
-        Route::get('products','ProductsController@index')->name('products');
-        Route::post('delete_product','ProductsController@delete')->name('delete.product');
-        Route::post('create_product','ProductsController@create')->name('create.product');
-        Route::post('update_product','ProductsController@update')->name('update.product');
-
-        ################################### Users ##########################################
-        Route::get('users','UserController@index')->name('users');
-        Route::post('delete_user','UserController@delete')->name('delete.user');
 
 
 

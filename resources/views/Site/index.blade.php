@@ -6,10 +6,10 @@
     <section class="video-bg">
       <video autoplay loop class="collapse in" id="video_background" preload="auto" autoplay="autoplay" loop="loop"
         muted="muted">
-        <source src="video/video-2.mp4" type="video/mp4">
-        <source src="video/video-2.ogv.html" type="video/ogv">
-        <source src="video/video-2.webm.html" type="video/webm">
-        bgvideo
+        <source src="{{url('Site')}}/video/video-2.mp4" type="video/mp4">
+        <source src="{{url('Site')}}/video/video-2.ogv.html" type="video/ogv">
+        <source src="{{url('Site')}}/video/video-2.webm.html" type="video/webm">
+{{--        bgvideo--}}
       </video>
     </section>
 
@@ -82,7 +82,7 @@
 
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-              <img src="img/about-img.png">
+              <img src="{{url('Site')}}/img/about-img.png">
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@
 
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 wow  fadeInRight">
           <div class="hovereffect">
-            <img class="img-responsive" src="img/portfolio/3.png" alt="">
+            <img class="img-responsive" src="{{url('Site')}}/img/portfolio/3.png" alt="">
             <div class="overlay">
               <h2>هم هم</h2>
               <a class="info" target="_blank"
@@ -205,7 +205,7 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 wow  flipInY">
           <div class="hovereffect">
-            <img class="img-responsive " src="img/portfolio/18.png" alt="">
+            <img class="img-responsive " src="{{url('Site')}}/img/portfolio/18.png" alt="">
             <div class="overlay">
               <h2>المؤسسه العامه للتامينات الاجتماعيه</h2>
               <!--                            <a class="info" target="_blank" target="_blank" href="#">مشاهده المزيد</a>-->
@@ -214,7 +214,7 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 wow  fadeInDown">
           <div class="hovereffect">
-            <img class="img-responsive " src="img/portfolio/20.jpg" alt="">
+            <img class="img-responsive " src="{{url('Site')}}/img/portfolio/20.jpg" alt="">
             <div class="overlay">
               <h2>قوات امن المنشات</h2>
               <!--                            <a class="info" target="_blank" href="#">مشاهده المزيد</a>-->
@@ -223,7 +223,7 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 wow  zoomIn">
           <div class="hovereffect">
-            <img class="img-responsive " src="img/portfolio/19.png" alt="">
+            <img class="img-responsive " src="{{url('Site')}}/img/portfolio/19.png" alt="">
             <div class="overlay">
               <h2>وزاره الصحه</h2>
               <!--                            <a class="info" target="_blank" href="#">مشاهده المزيد</a>-->
@@ -232,7 +232,7 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 wow  fadeInRight">
           <div class="hovereffect">
-            <img class="img-responsive " src="img/portfolio/8.png" alt="">
+            <img class="img-responsive " src="{{url('Site')}}/img/portfolio/8.png" alt="">
             <div class="overlay">
               <h2>شيل كوم</h2>
               <a class="info" target="_blank" target="_blank"
@@ -243,7 +243,7 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 wow flipInY">
           <div class="hovereffect">
-            <img class="img-responsive" src="img/portfolio/15.png" alt="">
+            <img class="img-responsive" src="{{url('Site')}}/img/portfolio/15.png" alt="">
             <div class="overlay">
               <h2>تدللي</h2>
               <a class="info" target="_blank"
@@ -254,7 +254,7 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 wow fadeInDown">
           <div class="hovereffect">
-            <img class="img-responsive" src="img/portfolio/2.png" alt="">
+            <img class="img-responsive" src="{{url('Site')}}/img/portfolio/2.png" alt="">
             <div class="overlay">
               <h2>امداد</h2>
               <a class="info" target="_blank"
@@ -265,7 +265,7 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 wow zoomIn">
           <div class="hovereffect">
-            <img class="img-responsive " src="img/portfolio/%D8%AB%D9%82%D8%A9.png" alt="">
+            <img class="img-responsive " src="{{url('Site')}}/img/portfolio/%D8%AB%D9%82%D8%A9.png" alt="">
             <div class="overlay">
               <h2>ثقه</h2>
               <a class="info" target="_blank"
@@ -338,7 +338,7 @@
             </div>
             <div class="col-lg-5 col-md-12 col-sm-6 col-12 ">
               <div class="first-step-img wow fadeInUp ">
-                <img class="img-thumbnail " src="img/business-background.jpg">
+                <img class="img-thumbnail " src="{{url('Site')}}/img/business-background.jpg">
               </div>
             </div>
           </div>
@@ -349,7 +349,7 @@
         <div class="col-lg-12 col-md-12 col-sm-6 col-12 first-step">
           <div class="row">
             <div class=" col-12 mid-pic">
-              <img src="img/dotted-line-png-2.png" class="wow fadeInUp w-auto">
+              <img src="{{url('Site')}}/img/dotted-line-png-2.png" class="wow fadeInUp w-auto">
             </div>
             <div class="col-lg-7 col-md-12 col-sm-6 col-12 ">
               <div class="second-step-txt">
@@ -362,7 +362,7 @@
             </div>
             <div class="col-lg-5 col-md-12 col-sm-6 col-12 ">
               <div class="second-step-img  wow fadeInUp ">
-                <img class="img-thumbnail" src="img/design.png">
+                <img class="img-thumbnail" src="{{url('Site')}}/img/design.png">
               </div>
             </div>
           </div>
@@ -371,7 +371,7 @@
 
           <div class="row">
             <div class=" col-12 mid-pic">
-              <img src="img/dotted-line-png-2.png" class="wow fadeInUp w-auto">
+              <img src="{{url('Site')}}/img/dotted-line-png-2.png" class="wow fadeInUp w-auto">
             </div>
             <div class="col-lg-7 col-md-12 col-sm-6 col-12 ">
               <div class="third-step-txt ">
@@ -383,7 +383,7 @@
             </div>
             <div class="col-lg-5 col-md-12 col-sm-6 col-12 ">
               <div class="third-step-img  wow fadeInUp ">
-                <img class="img-thumbnail" src="img/develop.jpg">
+                <img class="img-thumbnail" src="{{url('Site')}}/img/develop.jpg">
               </div>
             </div>
           </div>
@@ -392,7 +392,7 @@
 
           <div class="row">
             <div class=" col-12 mid-pic">
-              <img src="img/dotted-line-png-2.png" class="wow fadeInUp w-auto">
+              <img src="{{url('Site')}}/img/dotted-line-png-2.png" class="wow fadeInUp w-auto">
             </div>
             <div class="col-lg-7 col-md-12 col-sm-6 col-12 ">
 
@@ -404,7 +404,7 @@
             </div>
             <div class="col-lg-5 col-md-12 col-sm-6 col-12 ">
               <div class="fourth-step-img  wow fadeInUp ">
-                <img class="img-thumbnail" src="img/launch.jpg">
+                <img class="img-thumbnail" src="{{url('Site')}}/img/launch.jpg">
               </div>
             </div>
           </div>
@@ -435,7 +435,7 @@
                 <div class="testimonial">
                   <!--Avatar-->
                   <div class="avatar mx-auto mb-4 pt-3">
-                    <img src="img/300_9.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
+                    <img src="{{url('Site')}}/img/300_9.jpg" class="rounded-circle img-fluid" alt="First sample avatar image">
                   </div>
                   <!--Content-->
                   <p>
@@ -461,7 +461,7 @@
                 <div class="testimonial">
                   <!--Avatar-->
                   <div class="avatar mx-auto mb-4  pt-3">
-                    <img src="img/300_13.jpg" class="rounded-circle img-fluid" alt="Second sample avatar image">
+                    <img src="{{url('Site')}}/img/300_13.jpg" class="rounded-circle img-fluid" alt="Second sample avatar image">
                   </div>
                   <!--Content-->
                   <p>

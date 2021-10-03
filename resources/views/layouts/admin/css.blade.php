@@ -216,3 +216,30 @@ s<!--begin::Fonts-->
         padding:10px 20px;
     }
 </style>
+
+
+
+
+<link rel="stylesheet" href="{{ url('/')}}/admin/css/datatables2.min.css">
+<style>
+    #example_length{
+        min-width: 33%;
+        display: inline-flex;
+        justify-content: center;
+        padding:10px 20px;
+    }
+    #example_filter{
+        min-width: 33%;
+        display: inline-flex;
+        justify-content: center;
+        padding:10px 20px;
+    }
+    .dt-buttons.btn-group{
+        min-width: 33%;
+        display: inline-flex;
+        justify-content: center;
+        padding:10px 20px;
+    }
+</style>
+
+

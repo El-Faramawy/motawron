@@ -63,52 +63,36 @@
                         </div>
                     </div>
 
-                <!-- ####################### Shopping-car #################### -->
-                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-                    <span class="menu-link"><span class="menu-icon"><i class="fa fa-shopping-cart fs-3"></i></span>
-                        <span class="menu-title">عربات البائعين</span><span class="menu-arrow"></span>
-                    </span>
-                    <div class="menu-sub menu-sub-accordion menu-active-bg">
-                        <div class="menu-item">
-                            <a class="menu-link" href="{{route('shopping_cars')}}"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span>
-                                <span class="menu-title">قائمة العربات</span>
-                            </a>
-                        </div>
-                        <div class="menu-item">
-                            <a class="menu-link" href="{{route('add.car')}}"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span>
-                                <span class="menu-title">اضافة عربة</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- ####################### Products #################### -->
+                <!-- ####################### Admins #################### -->
                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-                    <span class="menu-link"><span class="menu-icon"><i class="fa fa-coffee fs-3"></i></span>
-                        <span class="menu-title">المنتجات</span><span class="menu-arrow"></span>
+                    <span class="menu-link"><span class="menu-icon"><i class="bi bi-person fs-3"></i></span>
+                        <span class="menu-title">عن الموقع</span><span class="menu-arrow"></span>
                     </span>
-                    <div class="menu-sub menu-sub-accordion menu-active-bg">
-                        <div class="menu-item">
-                            <a class="menu-link" href="{{route('products')}}"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span>
-                                <span class="menu-title">قائمة المنتجات</span>
-                            </a>
+                        <div class="menu-sub menu-sub-accordion menu-active-bg">
+                            <div class="menu-item">
+                                <a class="menu-link" href="{{route('main_about')}}"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span>
+                                    <span class="menu-title">الصفحة الرئيسية</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link" href="{{route('about_us')}}"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span>
+                                    <span class="menu-title">من نحن</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- ####################### Clients #################### -->
-                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-                    <span class="menu-link"><span class="menu-icon"><i class="fa fa-users fs-3"></i></span>
-                        <span class="menu-title">العملاء</span><span class="menu-arrow"></span>
+
+                <!-- ####################### services #################### -->
+                <a  class="menu-item menu-accordion" href="{{route('services')}}">
+                    <span class="menu-link"><span class="menu-icon"><i class="bi bi-person fs-3"></i></span>
+                        <span class="menu-title">خدماتنا</span>
                     </span>
-                    <div class="menu-sub menu-sub-accordion menu-active-bg">
-                        <div class="menu-item">
-                            <a class="menu-link" href="{{route('users')}}"><span class="menu-bullet"><span class="bullet bullet-dot"></span></span>
-                                <span class="menu-title">قائمة العملاء</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                </a>
+
+
+
             </div>
             <!--end::Menu-->
         </div>
@@ -136,3 +120,18 @@
     <!--end::Footer-->
 </div>
 <!--end::Aside-->
+
+
+
+
+
+
+{{--@push('admin_js')--}}
+{{--    <script>--}}
+{{--        $(document).on('click','.menu-link',function (){--}}
+{{--            $('.menu-link').removeClass('active');--}}
+{{--            $(this).addClass('active');--}}
+{{--        })--}}
+{{--    </script>--}}
+
+{{--@endpush--}}
