@@ -1,5 +1,6 @@
 @extends('layouts.admin.app')
 @section('page_name') خدماتنا @endsection
+
 @section('content')
     <div class="m-content">
         <div class="m-portlet m-portlet--mobile">
@@ -30,20 +31,19 @@
             <div class="m-portlet__body">
 
                 <!--begin: Datatable -->
+                <table id="example" class="table table-striped- table-bordered table-hover table-checkable" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>الايقونة</th>
+                        <th>الإسم</th>
+                        <th>المحتوى</th>
+                        <th>تعديل</th>
+                        <th>حذف</th>
 
-{{--                <table  id="contact_table" class="table table-striped- table-bordered table-hover table-checkable" style="width:100%">--}}
-{{--                    <thead>--}}
-{{--                    <tr>--}}
-{{--                        <th>#</th>--}}
-{{--                        <th>الايقونة</th>--}}
-{{--                        <th>الإسم</th>--}}
-{{--                        <th>المحتوى</th>--}}
-{{--                        <th>تعديل</th>--}}
-{{--                        <th>حذف</th>--}}
-
-{{--                    </tr>--}}
-{{--                    </thead>--}}
-{{--                    <tbody>--}}
+                    </tr>
+                    </thead>
+                    <tbody>
 {{--                    @foreach($services as $key=>$user)--}}
 {{--                        <tr>--}}
 {{--                            <td>{{$key}}</td>--}}
@@ -66,90 +66,50 @@
 {{--                            </td>--}}
 {{--                        </tr>--}}
 {{--                    @endforeach--}}
-{{--                    </tbody>--}}
-{{--                </table>--}}
-                <table id="contact_table" class="table table-striped table-dark">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">message</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
                     </tbody>
                 </table>
+{{--                <table id="example" class="table table-striped table-dark">--}}
+{{--                    <thead>--}}
+{{--                    <tr>--}}
+{{--                        <th scope="col">#</th>--}}
+{{--                        <th scope="col">Name</th>--}}
+{{--                        <th scope="col">Email</th>--}}
+{{--                        <th scope="col">Phone</th>--}}
+{{--                        <th scope="col">message</th>--}}
+{{--                        <th scope="col">Action</th>--}}
+{{--                    </tr>--}}
+{{--                    </thead>--}}
+{{--                    <tbody>--}}
+{{--                    </tbody>--}}
+{{--                </table>--}}
+
             </div>
         </div>
 
 
     </div>
 @endsection
-{{--<script src="{{url('/')}}/admin/assets/js/jquery.js"></script>--}}
 
-{{--<script>--}}
-{{--    $(document).ready(function(){--}}
-{{--        //Show data in the delete form--}}
-{{--        $('#delete').on('show.bs.modal', function(event) {--}}
-{{--            var button = $(event.relatedTarget)--}}
-{{--            var id = button.data('id')--}}
-{{--            var name = button.data('name')--}}
-{{--            var modal = $(this)--}}
-{{--            modal.find('.modal-body #id').val(id);--}}
-{{--            modal.find('.modal-body #name').text('');--}}
-{{--            modal.find('.modal-body #name').text(name);--}}
-{{--        });--}}
-{{--    });--}}
-{{--</script>--}}
 @push('admin_js')
     <script type="text/javascript">
-        var table1 = $('#contact_table').DataTable({
+        var table1 = $('#example').DataTable({
             processing:true,
             serverSide:true,
-            ajax:"{{route('all.contact')}}",
+            ajax:"{{route('all.services')}}",
             columns:[
                 {data:'id',name:'id'},
-                {data:'name',name:'name'},
-                {data:'email',name:'email'},
-                {data:'phone',name:'phone'},
-                {data:'message',name:'message'},
-                {data:'action',name:'action',orderable:false,searchacle:false},
+                {data:'icon',name:'icon'},
+                {data:'title',name:'title'},
+                {data:'content',name:'content'},
+                // {data:'message',name:'message'},
+                {data:'edit',name:'edit',orderable:false,searchacle:false},
+                {data:'delete',name:'delete',orderable:false,searchacle:false},
             ]
         });
+
+//=========================================  Add  ===================================================
+
     </script>
-{{--    <script type="text/javascript">--}}
-{{--        $(document).ready(function () {--}}
-{{--            var table1 = $('#contact_table').DataTable({--}}
-{{--                processing: true,--}}
-{{--                serverSide: true,--}}
-{{--                ajax: "{{route('all.services')}}",--}}
-{{--                columns: [--}}
-{{--                    {data: 'id', name: 'id'},--}}
-{{--                    {data:'icon',name:'icon'},--}}
-{{--                    {data:'title',name:'title'},--}}
-{{--                    {data:'content',name:'content'},--}}
-{{--                    {data: 'action', name: 'action', orderable: false, searchacle: false},--}}
-{{--                ]--}}
-{{--            });--}}
-{{--        });--}}
-
-
-{{--    </script>--}}
-
-
-    <!-- jQuery library -->
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-
-    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 
 @endpush
-
 

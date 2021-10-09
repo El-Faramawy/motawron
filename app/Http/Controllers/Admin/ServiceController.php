@@ -14,32 +14,27 @@ class ServiceController extends Controller
         return view('Admin/Service/index');
     }
 //    //===========================================================================
-//    public function all_services(){
-//        $contact = Service::all();
-//        return response()->json($contact);
-//        return DataTables::of($contact)
-//            ->addColumn('action',function ($contac){
-////                $btn = '<a class="btn btn-sm btn-success" onclick="show('.$contact->id.')">Show</a>'.''.
-////                    '<a class="btn btn-sm btn-info" onclick="update('.$contact->id.')">Edit</a>'.''.
-////                    '<a class="btn btn-sm btn-danger" onclick="delete('.$contact->id.')">Delete</a>';
-//                $btn = '<td>
-//                                <button type="button" class="btn btn-icon btn-info btn-sm" onclick="update('.$contac->id.')" data-toggle="modal"    style="border-radius: 50% !important;" data-target="#edit" ><i class="fa fa-edit"></i></button>
-//                            </td>
-//                            <td>
-//                                <button type="button" class="btn btn-icon btn-danger btn-sm" onclick="delete('.$contac->id.')" data-toggle="modal"    style="border-radius: 50% !important;" data-target="#delete" ><i class="fa fa-trash"></i></button>
-//                            </td>';
-//                return $btn;
-//            })->make(true);
-//    }
 
-    public function all_contact(){
-        $contact = Contact::all();
-        return DataTables::of($contact)
-            ->addColumn('action',function ($contact){
-                $btn = '<a class="btn btn-sm btn-success" onclick="show('.$contact->id.')">Show</a>'.
-                    '<a class="btn btn-sm btn-info" onclick="update('.$contact->id.')">Edit</a>'.
-                    '<a class="btn btn-sm btn-danger" onclick="delete('.$contact->id.')">Delete</a>';
-                return $btn;
-            })->rowColumn(['action'])->make(true);
+    public function all_services(){
+        $service = Service::all();
+        return DataTables::of($service)
+            ->addColumn('icon',function ($service) {
+                $icon = '<center><i class="'.$service->icon.'"></i></center>';
+                return $icon;
+            })
+            ->addColumn('edit',function ($service) {
+                $edit = '<center><a class="btn btn-sm btn-icon btn-info" style="border-radius: 50% !important;" onclick="update(' . $service->id . ')"><i class="fa fa-edit"></i></a></center>';
+                return $edit;
+            })
+            ->addColumn('delete',function ($service){
+                $delete =  '<center><a class="btn btn-sm btn-icon btn-danger delete_element" data_delete="'.route("delete_service").'" data_id='.$service->id.' style="border-radius: 50% !important;" onclick="delete_('.$service->id.')"><i class="fa fa-trash"></i></a></center>';
+                return $delete;
+            })->rawColumns(['edit','delete','icon'])->make(true);
+    }
+//    //===========================================================================
+
+    public function delete_service(Request $request){
+        Service::where('id',$request->id)->delete();
+        return response()->json();
     }
 }

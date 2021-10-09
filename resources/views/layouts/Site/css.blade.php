@@ -23,3 +23,6 @@
 <link rel="stylesheet" href="{{url('Site')}}/css/style.css">
 <!-- fonts  -->
 <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{url('Site/css')}}/tostar.css">
+

@@ -40,10 +40,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('store-profile','AdminController@save_profile')->name('store-profile');
 
 
-        ################################### Shopping cars ##########################################
+        ################################### services ##########################################
         Route::get('services','ServiceController@index')->name('services');
-//        Route::get('all/services','ServiceController@all_services')->name('all.services');
-        Route::get('all/contact','ServiceController@all_contact')->name('all.contact');
+        Route::get('all/services','ServiceController@all_services')->name('all.services');
+        Route::post('delete_service','ServiceController@delete_service')->name('delete_service');
 
         ################################### About ##########################################
         Route::get('main_about','ServiceController@main_about')->name('main_about');

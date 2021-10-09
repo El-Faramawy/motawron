@@ -1,8 +1,9 @@
 <meta charset="utf-8" />
-<title>كافية اب | لوحة التحكم</title>
+<title>المطورون | لوحة التحكم</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="shortcut icon" href="{{url('admin')}}/fav.png" />
-s<!--begin::Fonts-->
+<link rel="shortcut icon" href="{{url('Site')}}/img/logo2.png" />
+<meta name="csrf-token" content="{{csrf_token()}}">
+<!--begin::Fonts-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 <!--end::Fonts-->
 <!--begin::Global Stylesheets Bundle(used by all pages)-->
@@ -15,6 +16,8 @@ s<!--begin::Fonts-->
 <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
 
 <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.0.18/sweetalert2.min.js"></script>
+
 <style>
     *{
         font-family: 'Cairo', sans-serif;
@@ -35,14 +38,14 @@ s<!--begin::Fonts-->
     input{
         font-family: "Cairo" ,sans-serif !important;
     }
-    @toastr_css
+    /*@toastr_css*/
 </style>
 <!--end::Web font -->
 
 {{--===================================--}}
 <!-- Bootstrap -->
 <link rel="stylesheet" href="{{ url('/')}}/admin/css/bootstrap-rtl.css">
-<link rel="stylesheet" href="{{ url('/')}}/admin/css/datatables2.min.css">
+{{--<link rel="stylesheet" href="{{ url('/')}}/admin/css/datatables2.min.css">--}}
 <style media="screen">
     .dz-image
     {
@@ -130,7 +133,7 @@ s<!--begin::Fonts-->
 </style>
 
 {{--=======================  tostar  ====================================--}}
-{{--<link rel="stylesheet" href="{{url('admin/css')}}/tostar.css">--}}
+<link rel="stylesheet" href="{{url('admin/css')}}/tostar.css">
 
 {{--===================================--}}
 
@@ -190,37 +193,40 @@ s<!--begin::Fonts-->
     {
         width: 51px;
     }
+    div#swal2-html-container {
+        text-align: center;
+    }
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/dropzone.css">
 
 {{--=============== datatable ===================--}}
 
-<style>
-    #example_length{
-        min-width: 33%;
-        display: inline-flex;
-        justify-content: center;
-        padding:10px 20px;
-    }
-    #example_filter{
-        min-width: 33%;
-        display: inline-flex;
-        justify-content: center;
-        padding:10px 20px;
-    }
-    .dt-buttons.btn-group{
-        min-width: 33%;
-        display: inline-flex;
-        justify-content: center;
-        padding:10px 20px;
-    }
-</style>
-
-
-
-
+{{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">--}}
 <link rel="stylesheet" href="{{ url('/')}}/admin/css/datatables2.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+{{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>--}}
+
+{{--<script src="{{url('/')}}/admin/js/datatables2.min.js"></script>--}}
+
+{{--<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>--}}
+
+{{--<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>--}}
+
+{{--<script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>--}}
+<script src="{{url('admin')}}/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+
+
+<script src="{{url('admin')}}/assets/demo/custom/crud/datatables/extensions/buttons.js" type="text/javascript"></script>
+
+<script src="{{url('admin/js')}}/dataTables.buttons.min.js"></script>
+
 <style>
     #example_length{
         min-width: 33%;
@@ -240,6 +246,12 @@ s<!--begin::Fonts-->
         justify-content: center;
         padding:10px 20px;
     }
+    div#example_wrapper > div:first-child{
+        /*display:none!important;*/
+    }
+    table#example  thead{
+        background-color:rgba(157,211,168,1);
+        color: #575962;
+    }
+
 </style>
-
-

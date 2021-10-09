@@ -30,6 +30,12 @@ License: You must have a valid license purchased only from themeforest(the above
         .toast-container{
             float: left!important;
         }
+        .m-checkbox.m-checkbox--focus>input:checked ~ span {
+            border: 1px solid rgb(250, 31, 31) !important;
+        }
+        /*.m-checkbox.m-checkbox--focus>span:after {*/
+        /*    border: solid rgb(250, 31, 31) !important;*/
+        /*}*/
     </style>
     <!--end::Web font -->
     <!--end::Web font -->
@@ -66,15 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!--end::Page Vendors Styles -->
     {{--==============================================    end  css   ====================================--}}
 
-
     {{--    end css--}}
-
-
-
-
-
-
-
 
 </head>
 
